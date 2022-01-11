@@ -49,3 +49,8 @@ The fractal can be visualized using the heatmap function of the the Plots.jl pac
 frac = juliaSet(-0.79 , 0.15)
 using Plots
 plot(heatmap(1:size(frac,1),1:size(frac,2),frac,color=:Spectral))
+
+#run again to see the execution time
+
+using BenchmarkTools
+@btime juliaSet(-0.79,0.15)
