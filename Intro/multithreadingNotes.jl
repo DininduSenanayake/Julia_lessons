@@ -30,3 +30,13 @@ function juliaSetCalc!(pic,c,n)
     end
     nothing
 end
+
+#More in the next section on why this decomposition into columns has been used. Here is the driver function to generate the fractal:
+
+function juliaSet(x,y,n=1000,method = juliaSetCalc!, extra...)
+    c = x +x*im
+    pic = Array{UInt8,2}(undef,n,n)
+    method(pic,c,n,extra...)
+    return pic
+end
+
