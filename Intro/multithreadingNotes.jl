@@ -40,3 +40,12 @@ function juliaSet(x,y,n=1000,method = juliaSetCalc!, extra...)
     return pic
 end
 
+#=This function allows different parallel versions of the fractal calculation to be passed as a parameter, and the varargs (C programmers will know about this) parameter extra... allows for differences in the number of parameters.
+
+The fractal can be visualized using the heatmap function of the the Plots.jl package. Here is the fractal for c=−.79+0.15i
+:
+=#
+
+frac = juliaSet(-0.79 , 0.15)
+using Plots
+plot(heatmap(1:size(frac,1),1:size(frac,2),frac,color=:Spectral))
