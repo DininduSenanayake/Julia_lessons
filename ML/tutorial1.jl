@@ -62,3 +62,6 @@ function trainModel!(m,data;epochs=20)
 end
 trainModel!(m,data;epochs=20)
 
+#Visualising the results
+scatter(real[1,1:100],real[2,1:100],zcolor=m(real)')
+scatter!(fake[1,1:100],fake[2,1:100],zcolor=m(fake)',legend=false)
