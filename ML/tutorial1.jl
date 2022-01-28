@@ -39,3 +39,10 @@ data = Flux.Data.DataLoader((X, Y'), batchsize=100,shuffle=true);# Defining our 
 m    = NeuralNetwork()
 opt = Descent(0.05)loss(x, y) = sum(Flux.Losses.binarycrossentropy(m(x), y))
 
+#Training method 1
+ps = Flux.params(m)
+epochs = 20
+for i in 1:epochs
+    Flux.train!(loss, ps, data, opt)
+end
+println(mean(m(real)),mean(m(fake))) # Print model prediction
