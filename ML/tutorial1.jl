@@ -46,3 +46,19 @@ for i in 1:epochs
     Flux.train!(loss, ps, data, opt)
 end
 println(mean(m(real)),mean(m(fake))) # Print model prediction
+
+#Training Method 2
+m    = NeuralNetwork()
+function trainModel!(m,data;epochs=20)
+    for epoch = 1:epochs
+        for d in data
+            gs = gradient(Flux.params(m)) do
+                l = loss(d...)
+            end
+            Flux.update!(opt, Flux.params(m), gs)
+        end
+    end
+    @show mean(m(real)),mean(m(fake))
+end
+trainModel!(m,data;epochs=20)
+
