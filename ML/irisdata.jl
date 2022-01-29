@@ -4,3 +4,4 @@ import Pkg; Pkg.add("DataFrames")
 using CSV, DataFrames
 iris = DataFrame(CSV.File("mypath//iris.csv"))
 
+#prepare data
