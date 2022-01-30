@@ -5,3 +5,5 @@ arr = [1,2,3]
 
 array = Array{Int64}(undef,3)
 
+array = Array{Int64}(undef, 3,3,3)
+
