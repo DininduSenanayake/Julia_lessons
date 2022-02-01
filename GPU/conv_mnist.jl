@@ -64,3 +64,8 @@ function eval_loss_accuracy(loader, model, device)
     end
     return (loss = l/ntot |> round4, acc = acc/ntot*100 |> round4)
 end
+
+
+## utility functions
+num_params(model) = sum(length, Flux.params(model)) 
+round4(x) = round(x, digits=4)
