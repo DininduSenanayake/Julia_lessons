@@ -10,7 +10,8 @@ function generate_real_data(n)
     x1 = rand(1,n) .- 0.5
     x2 = (x1 .* x1)*3 .+ randn(1,n)*0.1
     return vcat(x1,x2)
-endfunction generate_fake_data(n)
+end
+   function generate_fake_data(n)
     θ  = 2*π*rand(1,n)
     r  = rand(1,n)/3
     x1 = @. r*cos(θ)
