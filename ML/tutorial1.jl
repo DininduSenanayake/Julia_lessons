@@ -17,7 +17,9 @@ end
     x1 = @. r*cos(θ)
     x2 = @. r*sin(θ)+0.5
     return vcat(x1,x2)
-end# Creating our data
+end
+
+# Creating our data
 train_size = 5000
 real = generate_real_data(train_size)
 fake = generate_fake_data(train_size)# Visualizing
