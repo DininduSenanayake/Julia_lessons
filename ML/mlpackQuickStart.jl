@@ -19,3 +19,15 @@ test, test_labels, train, train_labels = mlpack.preprocess_split(
     input=dataset,
     input_labels=labels,
     test_ratio=0.3)
+
+# Train a random forest.
+rf_model, _, _ = mlpack.random_forest(training=train,
+                              labels=train_labels,
+                              print_training_accuracy=true,
+                              num_trees=10,
+                              minimum_leaf_size=3)
+# Predict the labels of the test points.
+_, predictions, _ = mlpack.random_forest(input_model=rf_model,
+                                         test=test)
+
+                                         
