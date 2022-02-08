@@ -30,4 +30,10 @@ rf_model, _, _ = mlpack.random_forest(training=train,
 _, predictions, _ = mlpack.random_forest(input_model=rf_model,
                                          test=test)
 
-                                         
+
+# Now print the accuracy.  The third return value ('probabilities'), which we
+# ignored here, could also be used to generate an ROC curve.
+correct = sum(predictions .== test_labels)
+print("$(correct) out of $(length(test_labels)) test points correct " *
+    "($(correct / length(test_labels) * 100.0)%).\n")
+
