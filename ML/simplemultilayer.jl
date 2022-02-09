@@ -12,3 +12,13 @@ if has_cuda()		# Check if CUDA is available
     @info "CUDA is on"
     CUDA.allowscalar(false)
 end
+
+We set default values for learning rate, batch size, epochs, and the usage of a GPU (if available) for our model:
+
+    @with_kw mutable struct Args
+        η::Float64 = 3e-4       # learning rate
+        batchsize::Int = 1024   # batch size
+        epochs::Int = 10        # number of epochs
+        device::Function = gpu  # set as gpu, if gpu available
+    end
+    
