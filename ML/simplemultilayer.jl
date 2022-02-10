@@ -38,3 +38,13 @@ function getdata(args)
     # Reshape Data in order to flatten each image into a linear array
     xtrain = Flux.flatten(xtrain)
     xtest = Flux.flatten(xtest)
+
+        # One-hot-encode the labels
+        ytrain, ytest = onehotbatch(ytrain, 0:9), onehotbatch(ytest, 0:9)
+
+        # Batching
+        train_data = DataLoader((xtrain, ytrain), batchsize=args.batchsize, shuffle=true)
+        test_data = DataLoader((xtest, ytest), batchsize=args.batchsize)
+    
+        return train_data, test_data
+end
