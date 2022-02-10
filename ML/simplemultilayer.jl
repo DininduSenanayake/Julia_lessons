@@ -1,4 +1,4 @@
-# extraced from https://fluxml.ai/tutorials/2021/01/26/mlp.html
+# extraced from  https://fluxml.ai/tutorials/2021/01/26/mlp.html
 
 #Load packages
 using Flux, Statistics
@@ -22,3 +22,5 @@ end
         device::Function = gpu  # set as gpu, if gpu available
     end
     
+#Data
+#
