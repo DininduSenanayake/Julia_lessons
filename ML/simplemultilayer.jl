@@ -25,3 +25,16 @@ end
 #Data
 #We create the function getdata to load the MNIST train and test data sets
 #Prepare the for training process
+
+
+
+function getdata(args)
+    ENV["DATADEPS_ALWAYS_ACCEPT"] = "true"
+
+    # Loading Dataset	
+    xtrain, ytrain = MLDatasets.MNIST.traindata(Float32)
+    xtest, ytest = MLDatasets.MNIST.testdata(Float32)
+	
+    # Reshape Data in order to flatten each image into a linear array
+    xtrain = Flux.flatten(xtrain)
+    xtest = Flux.flatten(xtest)
