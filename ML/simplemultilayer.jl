@@ -23,4 +23,5 @@ end
     end
     
 #Data
-#
+#We create the function getdata to load the MNIST train and test data sets
+#Prepare 
