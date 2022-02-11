@@ -57,3 +57,10 @@ function build_model(; imgsize=(28,28,1), nclasses=10)
 end
 
 #Loss functions
+function loss_all(dataloader, model)
+    l = 0f0
+    for (x,y) in dataloader
+        l += logitcrossentropy(model(x), y)
+    end
+    l/length(dataloader)
+end
