@@ -64,3 +64,11 @@ function loss_all(dataloader, model)
     end
     l/length(dataloader)
 end
+
+function accuracy(data_loader, model)
+    acc = 0
+    for (x,y) in data_loader
+        acc += sum(onecold(cpu(model(x))) .== onecold(cpu(y)))*1 / size(x,2)
+    end
+    acc/length(data_loader)
+end
