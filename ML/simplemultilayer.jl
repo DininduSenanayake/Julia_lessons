@@ -50,3 +50,8 @@ function getdata(args)
 end
 
 #model
+function build_model(; imgsize=(28,28,1), nclasses=10)
+    return Chain(
+ 	    Dense(prod(imgsize), 32, relu),
+            Dense(32, nclasses))
+end
