@@ -48,3 +48,5 @@ function getdata(args)
     
         return train_data, test_data
 end
+
+#model
