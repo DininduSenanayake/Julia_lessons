@@ -55,3 +55,5 @@ function build_model(; imgsize=(28,28,1), nclasses=10)
  	    Dense(prod(imgsize), 32, relu),
             Dense(32, nclasses))
 end
+
+#Loss functions
