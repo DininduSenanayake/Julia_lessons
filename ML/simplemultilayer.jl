@@ -80,3 +80,9 @@ function train(; kws...)
 
     # Load Data
     train_data,test_data = getdata(args)
+        # Construct model
+    m = build_model()
+    train_data = args.device.(train_data)
+    test_data = args.device.(test_data)
+    m = args.device(m)
+    loss(x,y) = logitcrossentropy(m(x), y)
