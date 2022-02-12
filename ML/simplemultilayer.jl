@@ -74,3 +74,9 @@ function accuracy(data_loader, model)
 end
 
 #Train our model
+function train(; kws...)
+    # Initializing Model parameters 
+    args = Args(; kws...)
+
+    # Load Data
+    train_data,test_data = getdata(args)
