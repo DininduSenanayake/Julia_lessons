@@ -80,6 +80,7 @@ function train(; kws...)
 
     # Load Data
     train_data,test_data = getdata(args)
+    
         # Construct model
     m = build_model()
     train_data = args.device.(train_data)
