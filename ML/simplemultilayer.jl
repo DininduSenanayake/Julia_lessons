@@ -72,3 +72,5 @@ function accuracy(data_loader, model)
     end
     acc/length(data_loader)
 end
+
+#Train our model
