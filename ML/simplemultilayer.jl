@@ -88,6 +88,6 @@ function train(; kws...)
     m = args.device(m)
     loss(x,y) = logitcrossentropy(m(x), y)
 
-        ## Training
-        evalcb = () -> @show(loss_all(train_data, m))
-        opt = ADAM(args.η)
+    ## Training
+    evalcb = () -> @show(loss_all(train_data, m))
+    opt = ADAM(args.η)
