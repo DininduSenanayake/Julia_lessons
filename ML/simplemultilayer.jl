@@ -91,3 +91,5 @@ function train(; kws...)
     ## Training
     evalcb = () -> @show(loss_all(train_data, m))
     opt = ADAM(args.η)
+    
+    @epochs args.epochs Flux.train!(loss, params(m), train_data, opt, cb = evalcb)
