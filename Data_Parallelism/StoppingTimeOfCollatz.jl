@@ -17,3 +17,14 @@ function collatz_stopping_time(x)
         x = collatz(x)
     end 
 end
+
+plot =  scatter(
+    map(collatz_stopping_time, 1:10_100),
+    xlabel = "Initial value",
+    ylabel = "Stopping time",
+    label = "",
+    markercolor = 1,
+    markerstrokecolor = 1, 
+    markersize = 3,
+    size = (450 , 300),
+)
