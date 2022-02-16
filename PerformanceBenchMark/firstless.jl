@@ -25,3 +25,5 @@ function preallocate(x)
 end
 
 preallocate (generic function with 1 method)
+
+@benchmark v61 = OmniSci.TStringValue.(int64_10x6)
