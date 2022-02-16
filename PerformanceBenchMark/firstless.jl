@@ -1,6 +1,6 @@
 using Rando, OmniSci, BenchmarkTools, Base.Threads
 
-#change defaults, since exaples long-running
+#change defaults, since examples long-running
 
 BenchmarkTools.DEFAULT_PARAMETERS.seconds = 1000
 
