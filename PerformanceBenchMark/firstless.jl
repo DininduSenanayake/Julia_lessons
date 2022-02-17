@@ -27,3 +27,6 @@ end
 preallocate (generic function with 1 method)
 
 @benchmark v61 = OmniSci.TStringValue.(int64_10x6)
+
+#Interpolating the int64_10x6 input array into the function takes it from being a global variable to a local, 
+#and sure enough, we see roughly a 6% improvement in the minimum time when we pre-allocate the array:
