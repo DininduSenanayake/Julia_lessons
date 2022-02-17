@@ -32,3 +32,5 @@ preallocate (generic function with 1 method)
 #and sure enough, we see roughly a 6% improvement in the minimum time when we pre-allocate the array:
 
 @benchmark v61i =OmniSci.TStringValue.($int64_10x6)
+
+@benchmark v62i = preallocate($int64_10x6)
