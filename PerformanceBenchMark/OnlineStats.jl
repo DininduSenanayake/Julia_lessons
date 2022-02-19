@@ -9,3 +9,4 @@ using FLoops
     a = X +y
     b = X - y
     @reduce(s += a, t += b)
+end
