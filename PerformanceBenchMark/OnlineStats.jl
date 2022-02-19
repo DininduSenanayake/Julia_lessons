@@ -6,4 +6,5 @@ e1 = Folds.reduce(Mean(), 1:10)
 using FLoops
 
 @floop for (x,y) in zip(1:3, 1:2:6)
-    a = x+y
+    a = X +y
+    b = X - y
