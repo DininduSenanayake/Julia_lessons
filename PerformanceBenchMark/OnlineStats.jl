@@ -8,3 +8,4 @@ using FLoops
 @floop for (x,y) in zip(1:3, 1:2:6)
     a = X +y
     b = X - y
+    @reduce(s += a, t += b)
