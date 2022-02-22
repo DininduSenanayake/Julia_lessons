@@ -9,4 +9,4 @@ Julia has inbuilt automatic parallelism. Consider the multiplication of two larg
 
 ```julia
 A = rand(10000,10000)
-B = 
+B = rand(10000,10000)
