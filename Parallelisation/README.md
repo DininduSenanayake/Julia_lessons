@@ -15,3 +15,4 @@ A*B
 ```
 
 If we run this in a Julia session and monitor the resource usage (e.g. via `top`) we can see that all cores on our computers are used!
+
