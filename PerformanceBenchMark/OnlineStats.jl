@@ -1,8 +1,8 @@
-#Loading the first package
+##Loading the first package
 using OnlineStats: Means
 e1 = Folds.reduce(Mean(), 1:10)
 
-#Manual Reductions
+##Manual Reductions
 
 using FLoops
 
